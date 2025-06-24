@@ -151,100 +151,165 @@
                     <h1 class="text-center mb-4"></h1>
                 
                     <form id="quote-form">
-                      <div class="mb-4">
-                        <label for="plan" class="form-label">Select a Plan</label>
-                        <select class="form-select" id="plan" required>
-                          <option value="" disabled selected>Choose a plan</option>
-                          <option value="basic">Basic Wash</option>
-                          <option value="premium">Premium Detail</option>
-                          <option value="executive">Executive Package</option>
-                        </select>
-                      </div>
-                
-                      <div id="basic" class="service-list">
-                        <h5>Basic Wash Services</h5>
-                        <div class="form-check">
-                          <input class="form-check-input basic-checkbox" type="checkbox" value="300" id="exterior">
-                          <label class="form-check-label" for="exterior">Body Wash - saloon Ksh 300</label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input basic-checkbox" type="checkbox" value="400" id="vacuum">
-                          <label class="form-check-label" for="vacuum">Body wash 4x4/SUV - Ksh 400</label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input basic-checkbox" type="checkbox" value="250" id="tire">
-                          <label class="form-check-label" for="tire">Outer Wash - Ksh 250</label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input basic-checkbox" type="checkbox" value="400" id="vacuum">
-                          <label class="form-check-label" for="vacuum">Engine Wash Saloon - Ksh 400</label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input basic-checkbox" type="checkbox" value="500" id="vacuum">
-                          <label class="form-check-label" for="vacuum">Engine Wash Saloon 4x4/SUV - Ksh 500</label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input basic-checkbox" type="checkbox" value="500" id="vacuum">
-                          <label class="form-check-label" for="vacuum">Auto Wash - Ksh 500</label>
-                        </div>
-                        
-                      </div>
-                
-                      <div id="premium" class="service-list">
-                        <h5>Premium Detail Services</h5>
-                        <div class="form-check">
-                          <input class="form-check-input premium-checkbox" type="checkbox" value="400" id="engine">
-                          <label class="form-check-label" for="engine">Under Wash Saloon - Ksh 400</label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input premium-checkbox" type="checkbox" value="500" id="interior">
-                          <label class="form-check-label" for="interior">Under Wash 4x4/SUV - Ksh 500</label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input premium-checkbox" type="checkbox" value="300" id="polish">
-                          <label class="form-check-label" for="polish">Polish - Ksh 300</label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input premium-checkbox" type="checkbox" value="3,500" id="polish">
-                          <label class="form-check-label" for="polish">Buffing - Ksh 3,500</label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input premium-checkbox" type="checkbox" value="1,200" id="polish">
-                          <label class="form-check-label" for="polish">Vacuum and Shampoo - Ksh 1,200</label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input premium-checkbox" type="checkbox" value="200" id="polish">
-                          <label class="form-check-label" for="polish">Motorbikes - Ksh 200</label>
-                        </div>
-                      </div>
-                
-                      <div id="executive" class="service-list">
-                        <h5>Executive Package Services</h5>
-                        <div class="form-check">
-                          <input class="form-check-input executive-checkbox" type="checkbox" value="4,000" id="leather">
-                          <label class="form-check-label" for="leather">Executive wash Detailed - Ksh 4,000</label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input executive-checkbox" type="checkbox" value="2,000" id="leather">
-                          <label class="form-check-label" for="leather">Executive wash Simple - Ksh 2,000</label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input executive-checkbox" type="checkbox" value="700" id="paint">
-                          <label class="form-check-label" for="paint">Vacuum wet - Ksh 700</label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input executive-checkbox" type="checkbox" value="400" id="paint">
-                          <label class="form-check-label" for="paint">Vacuum Dry - Ksh 400</label>
-                        </div>
-                        
-                      </div>
-                
-                      <div class="quote-summary">
-                        <h5>Total: Ksh <span id="total-price">0</span></h5>
-                      </div>
-                
-                      <button type="submit" class="btn btn-primary mt-3">Submit Quote Request</button>
-                    </form>
+  <div class="mb-4">
+    <label for="plan" class="form-label">Select a Plan</label>
+    <select class="form-select" id="plan" required>
+      <option value="" disabled selected>Choose a plan</option>
+      <option value="basic">Basic Wash</option>
+      <option value="premium">Premium Detail</option>
+      <option value="executive">Executive Package</option>
+    </select>
+  </div>
+
+  <div id="basic" class="service-list" style="display:none;">
+    <h5>Basic Wash Services</h5>
+    <div class="form-check">
+      <input class="form-check-input basic-checkbox" type="checkbox" value="300" id="exterior-saloon">
+      <label class="form-check-label" for="exterior-saloon">Body Wash - saloon Ksh 300</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input basic-checkbox" type="checkbox" value="400" id="exterior-suv">
+      <label class="form-check-label" for="exterior-suv">Body wash 4x4/SUV - Ksh 400</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input basic-checkbox" type="checkbox" value="250" id="outer-wash">
+      <label class="form-check-label" for="outer-wash">Outer Wash - Ksh 250</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input basic-checkbox" type="checkbox" value="400" id="engine-saloon">
+      <label class="form-check-label" for="engine-saloon">Engine Wash Saloon - Ksh 400</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input basic-checkbox" type="checkbox" value="500" id="engine-suv">
+      <label class="form-check-label" for="engine-suv">Engine Wash 4x4/SUV - Ksh 500</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input basic-checkbox" type="checkbox" value="500" id="auto-wash">
+      <label class="form-check-label" for="auto-wash">Auto Wash - Ksh 500</label>
+    </div>
+  </div>
+
+  <div id="premium" class="service-list" style="display:none;">
+    <h5>Premium Detail Services</h5>
+    <div class="form-check">
+      <input class="form-check-input premium-checkbox" type="checkbox" value="400" id="under-saloon">
+      <label class="form-check-label" for="under-saloon">Under Wash Saloon - Ksh 400</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input premium-checkbox" type="checkbox" value="500" id="under-suv">
+      <label class="form-check-label" for="under-suv">Under Wash 4x4/SUV - Ksh 500</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input premium-checkbox" type="checkbox" value="300" id="polish-premium">
+      <label class="form-check-label" for="polish-premium">Polish - Ksh 300</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input premium-checkbox" type="checkbox" value="3500" id="buffing">
+      <label class="form-check-label" for="buffing">Buffing - Ksh 3,500</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input premium-checkbox" type="checkbox" value="1200" id="vacuum-shampoo">
+      <label class="form-check-label" for="vacuum-shampoo">Vacuum and Shampoo - Ksh 1,200</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input premium-checkbox" type="checkbox" value="200" id="motorbikes">
+      <label class="form-check-label" for="motorbikes">Motorbikes - Ksh 200</label>
+    </div>
+  </div>
+
+  <div id="executive" class="service-list" style="display:none;">
+    <h5>Executive Package Services</h5>
+    <div class="form-check">
+      <input class="form-check-input executive-checkbox" type="checkbox" value="4000" id="exec-detailed">
+      <label class="form-check-label" for="exec-detailed">Executive wash Detailed - Ksh 4,000</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input executive-checkbox" type="checkbox" value="2000" id="exec-simple">
+      <label class="form-check-label" for="exec-simple">Executive wash Simple - Ksh 2,000</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input executive-checkbox" type="checkbox" value="700" id="vacuum-wet">
+      <label class="form-check-label" for="vacuum-wet">Vacuum wet - Ksh 700</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input executive-checkbox" type="checkbox" value="400" id="vacuum-dry">
+      <label class="form-check-label" for="vacuum-dry">Vacuum Dry - Ksh 400</label>
+    </div>
+  </div>
+
+  <div class="quote-summary">
+    <h5>Total: Ksh <span id="total-price">0</span></h5>
+  </div>
+
+  <button type="submit" class="btn btn-primary mt-3">Submit Quote Request</button>
+  <button type="button" class="btn btn-success mt-3" onclick="sendQuoteWhatsApp()">Send via WhatsApp</button>
+</form>
+
+<script>
+  const planSelect = document.getElementById('plan');
+  const serviceLists = document.querySelectorAll('.service-list');
+
+  planSelect.addEventListener('change', () => {
+    serviceLists.forEach(list => list.style.display = 'none');
+    const selectedPlan = planSelect.value;
+    if (selectedPlan) {
+      document.getElementById(selectedPlan).style.display = 'block';
+    }
+    calculateTotal();
+  });
+
+  document.querySelectorAll('.form-check-input').forEach(cb => {
+    cb.addEventListener('change', calculateTotal);
+  });
+
+  function calculateTotal() {
+    let total = 0;
+    const plan = planSelect.value;
+    if (plan) {
+      document.querySelectorAll(`#${plan} .form-check-input:checked`).forEach(cb => {
+        total += parseInt(cb.value.replace(/[^0-9]/g, ""));
+      });
+    }
+    document.getElementById("total-price").innerText = total;
+  }
+
+  function sendQuoteWhatsApp() {
+    const plan = document.getElementById("plan").value;
+    if (!plan) {
+      alert("Please select a plan first.");
+      return;
+    }
+
+    let selectedServices = [];
+    let total = 0;
+
+    const checkboxes = document.querySelectorAll(`#${plan} .form-check-input:checked`);
+    checkboxes.forEach(cb => {
+      const label = cb.nextElementSibling.innerText;
+      const price = parseInt(cb.value.replace(/[^0-9]/g, ""));
+      selectedServices.push(label);
+      total += price;
+    });
+
+    if (selectedServices.length === 0) {
+      alert("Please select at least one service.");
+      return;
+    }
+
+    let message = `*Car Wash Quote Request*%0A`;
+    message += `Plan: ${plan.charAt(0).toUpperCase() + plan.slice(1)}%0A`;
+    message += `Selected Services:%0A`;
+    selectedServices.forEach(service => {
+      message += `- ${service}%0A`;
+    });
+    message += `%0ATotal: Ksh ${total}`;
+
+    const phoneNumber = "2547XXXXXXXX"; // Replace with your WhatsApp number
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappURL, "_blank");
+  }
+</script>
+
                   </div>
                 
                   <script>
