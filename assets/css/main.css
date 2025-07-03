@@ -223,7 +223,7 @@ h6 {
 --------------------------------------------------------------*/
 .header {
   --background-color: rgba(255, 255, 255, 0);
-  --heading-color: blue dark;
+  --heading-color: #006633;
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 20px 0;
