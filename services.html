@@ -660,6 +660,60 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+   <!-- WhatsApp Circular Button -->
+  <a href="https://wa.me/25471?text=Hello%2C%20I%20would%20like%20to%20to%20a%20photo%20inquire."
+    class="whatsapp-float" target="_blank" title="Inquire  on WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="40" height="40">
+  </a>
+  
+  <style>
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 100;
+      cursor: pointer;
+    }
+  
+    .whatsapp-float img {
+      transition: transform 0.3s ease;
+    }
+  
+    .whatsapp-float img:hover {
+      transform: scale(1.1);
+    }
+  </style>
+  <meta charset="UTF-8">
+  <title>Bottom Phone Icon</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .phone-icon {
+      position: fixed;
+      bottom: 80px;
+      left: 20px;
+      width: 40px;
+      height: 40px;
+      font-size: 15px;
+      color: white;
+      background-color: #25d366;
+      padding: 12px;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      transition: background-color 0.3s ease;
+    }
+  
+    .phone-icon:hover {
+      background-color: #128c7e;
+    }
+  </style>
+  <a href="tel:+25471" class="phone-icon" title="Call Now">
+    <i class="fas fa-phone"></i>
+  </a>
+
 
 </body>
 
